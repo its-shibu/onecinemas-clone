@@ -5,16 +5,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Onecinemas Clone</title>
-    <link rel="shortcut icon" href="https://onecinemas.com.np/Modules/Logo/image/new-logo_601394.png"
-        type="image/x-icon">
+
+    <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha384-JJccc46TlT7TbWdYW5YvG4Jwz6Wz7k/J5/ZU7W8U1/1D2F6xWIn/X/8/N8/jP/Zg" crossorigin="anonymous" />
+    <!-- internal CSS -->
+    <link rel="shortcut icon" href="https://onecinemas.com.np/Modules/Logo/image/new-logo_601394.png"
+        type="image/x-icon">
+
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Gotham" !important;
+        }
+        .content{
+            background: url('https://github.com/0000Blaze/sunrise-hr-solution/blob/main/images/Logo.png?raw=true');
+        }
+        .content h1{
+            font-family: poppins;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .content hr{
+            border-radius: 2px;
+            border: 1px solid black;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        img{
+            height: 100%;
+            width: 100%;
         }
     </style>
 </head>
@@ -34,12 +65,14 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div class="justify-content-center collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item font-weight-bold">
                             <a class="nav-link active" aria-current="page"
-                                href="https://www.onecinemas.com.np/Home.aspx">Home</a>
+                                href="https://www.onecinemas.com.np/Home.aspx">
+                                <i class="fa-solid fa-house"></i>
+                                Home</a>
                         </li>
                         <li class="nav-item font-weight-bold">
                             <a class="nav-link" aria-current="page"
@@ -82,47 +115,29 @@
 
     <!-- Carasoul -->
     <section class="banner">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="https://onecinemas.com.np/Modules/CineUploadFiles/Movie/HDImage/Facebook-and-Website-Banner-(cover)-06_795915.jpg"
+                <div class="carousel-item active">
+                    <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/HDImage/Facebook-and-Website-Banner-(cover)-06_795915.jpg"
                         class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="custom-head">Onecinemas OneRate</h5>
-                        <p>Every Tuesday and Wednesday only 250 at our both Location</p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://onecinemas.com.np/Modules/CineUploadFiles/Movie/HDImage/deal%20day_662145.jpg"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="custom-head mt-5">Movie Monday</h5>
-                        <p>Monday is Our Discount Day at Kalimati branch</p>
-                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://onecinemas.com.np/Modules/CineUploadFiles/Movie/HDImage/One_Cinemas_Banner_202659.png"
+                    <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/HDImage/deal%20day_662145.jpg"
                         class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-white custom-head">Ticket From Khalti</h5>
-                        <p class="text-white">Purchase your Ticket from Khalti to Get Special Discount</p>
-                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/HDImage/One_Cinemas_Banner_202659.png"
+                        class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon custom-button" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
+                <nav class="circle"></nav>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
@@ -130,11 +145,165 @@
         </div>
     </section>
 
-<!-- Now Showing -->
+    <!-- Now Showing -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <section class="next-change">
+        <div class="content">
+            <h1>Now Showing</h1>
+            <hr style="width: 50%; line-height: 10px;">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center p-2 m-2">
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/2%20copy_765230.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Captain Miller</h5>
+                        <p class="card-text">2 hours 40 mins</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/Merry%20Christmas%20320-480_423037.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Merry Christmas</h5>
+                        <p class="card-text">2 hours</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_765391.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dunki</h5>
+                        <p class="card-text">2 hours 45 min</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_626702.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Salar</h5>
+                        <p class="card-text">2 hours 55 min</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_152983.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Parkhi Base Timilai</h5>
+                        <p class="card-text">2 hours</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_606968.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Chitra</h5>
+                        <p class="card-text">2 hours</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Next Change -->
+    <section class="next-change">
+        <div class="content">
+            <h1>Next Change</h1>
+            <hr style="width: 50%; line-height: 10px;">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center p-2 m-2">
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/2%20copy_765230.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Captain Miller</h5>
+                        <p class="card-text">2 hours 40 mins</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/Merry%20Christmas%20320-480_423037.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Merry Christmas</h5>
+                        <p class="card-text">2 hours</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_765391.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dunki</h5>
+                        <p class="card-text">2 hours 45 min</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
+                    <div class="content d-flex align-item-center justify-content-center overflow-hidden">
+                        <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_626702.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Salar</h5>
+                        <p class="card-text">2 hours 55 min</p>
+                        <p class="card-text"><small class="text-body-secondary">
+                                <i class="far fa-heart"></i>
+                                Likes</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- javascrip cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -4,55 +4,55 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Onecinemas Clone</title>
+    <title>OneCinemas Movie Theater</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- fontawesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha384-JJccc46TlT7TbWdYW5YvG4Jwz6Wz7k/J5/ZU7W8U1/1D2F6xWIn/X/8/N8/jP/Zg" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cbc338aca7.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/cbc338aca7.css" crossorigin="anonymous"></script> -->
     <!-- internal CSS -->
     <link rel="shortcut icon" href="https://onecinemas.com.np/Modules/Logo/image/new-logo_601394.png"
         type="image/x-icon">
-
-
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Gotham" !important;
+            font-family: 'Poppins','Gotham','Quicksand', sans-serif;
         }
-
-        .content {
-            background: url('https://github.com/its-shibu/onecinemas-clone/blob/master/texture.png?raw=true');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+        .custom-nav, .dropdown-menu, .log-sig{
+            font-size: 20px;
         }
-
-        .content h1 {
-            font-family: poppins;
-            color: rgb(0, 0, 0);
+        .next-change h1{
+            text-align: center;
             font-weight: bold;
             text-transform: capitalize;
-            text-align: center;
         }
-
-        .content hr {
-            border-radius: 2px;
-            border: 1px solid black;
-            align-items: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .next-change hr{
             margin: 0 auto;
         }
-
-        img {
+        img{
             height: 100%;
             width: 100%;
+        }
+        .list-unstyled, ul li a{
+            text-decoration: none;
+            color: #000000;
+        }
+        .fa-facebook, .fa-square-instagram, .fa-linkedin{
+            color: #cc3732;
+            font-size: 35px;
+        }
+        .content{
+            background: url('https://github.com/its-shibu/onecinemas-clone/blob/master/texture.png?raw=true');
+            background-repeat: no-repeat;
+            background-size: 100%; 
         }
     </style>
 </head>
@@ -64,7 +64,7 @@
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="https://www.onecinemas.com.np" class="ml-5">
-                    <img src="https://onecinemas.com.np/Modules/Logo/image/new-logo_601394.png" alt="" width="100px">
+                    <img src="https://onecinemas.com.np/Modules/Logo/image/new-logo_601394.png" alt="" width="150px">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -73,7 +73,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="justify-content-center collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item font-weight-bold">
                             <a class="nav-link active" aria-current="page"
@@ -86,20 +86,24 @@
                                 href="https://www.onecinemas.com.np/Premium.aspx">Premium</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="https://www.onecinemas.com.np/About-Us.aspx"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-handshake"></i>
                                 Be With Us
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="https://www.onecinemas.com.np/About-Us.aspx">About
-                                        Us</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Ticket Rates</a></li>
-                                <li><a class="dropdown-item" href="#">Gallery</a></li>
+                                        Us</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.onecinemas.com.np/Ticket-Rate.aspx">Ticket Rates</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.onecinemas.com.np/Gallery.aspx">Gallery</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Advertise With Us</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.onecinemas.com.np/CineLogin.aspx?ReturnUrl=https://www.onecinemas.com.np/advertise-with-us.aspx">Advertise
+                                        With Us</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -108,11 +112,11 @@
                         </li>
 
                     </ul>
-                    <div class="btn btn-danger m-3">
-                        <a class="nav-link" href="">Login</a>
+                    <div class="btn btn-danger m-3 log-sig">
+                        <a class="nav-link" href="https://www.onecinemas.com.np/CineLogin.aspx">Login</a>
                     </div>
                     <div class="btn btn-danger">
-                        <a class="nav-link" href="">Sign Up</a>
+                        <a class="nav-link" href="https://www.onecinemas.com.np/CineLogin.aspx">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -169,8 +173,8 @@
                             <h5 class="card-title">Captain Miller</h5>
                             <p class="card-text">2 hours 40 mins</p>
                             <p class="card-text"><small class="text-body-secondary">
-                                    <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                    <i class="fa-regular fa-heart"></i>
+                                   40 Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
@@ -183,7 +187,7 @@
                             <p class="card-text">2 hours</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                   70 Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
@@ -196,7 +200,7 @@
                             <p class="card-text">2 hours 45 min</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                   200 Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
@@ -209,7 +213,7 @@
                             <p class="card-text">2 hours 55 min</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                   15 Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
@@ -222,7 +226,7 @@
                             <p class="card-text">2 hours</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                    7 Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
@@ -235,7 +239,7 @@
                             <p class="card-text">2 hours</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                   4 Likes</small></p>
                         </div>
                     </div>
                 </div>
@@ -245,14 +249,14 @@
 
     <!-- Next Change -->
     <section class="next-change">
-        <div class="content">
+        <div class="Ncontent">
             <h1>Next Change</h1>
             <hr style="width: 50%; line-height: 10px;">
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center p-2 m-2">
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
                         <div class="content d-flex align-item-center justify-content-center overflow-hidden">
-                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/2%20copy_765230.jpg"
+                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/image/320-480_800847.jpg"
                                 alt="">
                         </div>
                         <div class="card-body">
@@ -260,12 +264,12 @@
                             <p class="card-text">2 hours 40 mins</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                   10 Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
                         <div class="content d-flex align-item-center justify-content-center overflow-hidden">
-                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/Merry%20Christmas%20320-480_423037.jpg"
+                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/image/hanuman_215062.jpg"
                                 alt="">
                         </div>
                         <div class="card-body">
@@ -273,12 +277,12 @@
                             <p class="card-text">2 hours</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                  20  Likes</small></p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
                         <div class="content d-flex align-item-center justify-content-center overflow-hidden">
-                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_765391.jpg"
+                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/image/320-480_156498.jpg"
                                 alt="">
                         </div>
                         <div class="card-body">
@@ -286,31 +290,72 @@
                             <p class="card-text">2 hours 45 min</p>
                             <p class="card-text"><small class="text-body-secondary">
                                     <i class="far fa-heart"></i>
-                                    Likes</small></p>
+                                  7 Likes</small></p>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-2 p-2 m-2">
-                        <div class="content d-flex align-item-center justify-content-center overflow-hidden">
-                            <img src="https://www.onecinemas.com.np/Modules/CineUploadFiles/Movie/Image/320-480_626702.jpg"
-                                alt="">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Salar</h5>
-                            <p class="card-text">2 hours 55 min</p>
-                            <p class="card-text"><small class="text-body-secondary">
-                                    <i class="far fa-heart"></i>
-                                    Likes</small></p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- footer -->
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/"
+                        aria-label="Bootstrap">
+                        <span class="fs-5">For Booking</span>
+                    </a>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">+977-15903206/7</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>QuickLinks</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://www.onecinemas.com.np/Home.aspx">Home</a></li>
+                        <li class="mb-2"><a href="https://www.onecinemas.com.np/about-us">About Us</a></li>
+                        <li class="mb-2"><a href="https://www.onecinemas.com.np/Contact.aspx">Contact Us</a></li>
+                        <li class="mb-2"><a href="https://www.onecinemas.com.np/Privacy">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="https://www.onecinemas.com.np/Terms-n-conditions">Terms &
+                                Condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Payment Partner</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a
+                                href="https://khalti.com/payments/one-cinemas-movie-tickets/?csrt=4950068342771308235"><img
+                                    src="https://www.onecinemas.com.np/Upload/images/Khalti_Logo_Color.png" alt=""></a>
+                        </li>
+                        <li class="mb-2"><a href="https://esewa.com.np/"><img
+                                    src="https://www.onecinemas.com.np/Upload/images/png-clipart-esewa-fonepay-pvt-ltd-logo-brand-cash-on-delivery-logo-text-logo-thumbnail-removebg-preview.png"
+                                    alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4 mb-3">
+                    <h5>Social</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a></li>
+                        <li class="mb-2">
+                            For Complains & Support
+                            Email: info@onecinemas.com.np</li>
+                        <li class="mb-2">
+                            Copyright © 2019-2023 One Cinemas | All rights reserved</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- javascrip cdn link -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
 
